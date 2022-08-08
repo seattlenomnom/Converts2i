@@ -9,15 +9,26 @@
  * Example program from Kochan, Stephen G., "Programming in C 3rd ed.,"
  * Sams Publishing. Page 229.
  *
+ * 08/08/2022 Added strtoint(). Added code to input string.
 */
 
 #include <stdio.h>
 
-
+int strtoint(const char string[]);
 
 int main(int argc, char *argv[]) {
 
 
+    char inputstring[15];
+    int index;
+
+    for(index = 0; index <= 13; ++index)
+        inputstring[index] = '\b';
+
+    inputstring[14] = '\0';
+
+    printf("Enter an integer: ");
+    scanf("%14s", inputstring);
 
 
 
@@ -37,4 +48,16 @@ int main(int argc, char *argv[]) {
 
     return(0);
 
+}
+
+int strtoint(const char string[]) {
+
+    int i, intvalue, result = 0;
+
+    for(i = 0; (string[i] >= '0') && (string[i] <= '9'); ++i) {
+            intvalue = string[i] - '0';
+            result = (result * 10) + intvalue;
+    }
+
+    return(result);
 }
