@@ -10,6 +10,7 @@
  * Sams Publishing. Page 229.
  *
  * 08/08/2022 Added strtoint(). Added code to input string.
+ * 08/08/2022 Finished main(). Everything works: no rigorous testing.
 */
 
 #include <stdio.h>
@@ -30,8 +31,7 @@ int main(int argc, char *argv[]) {
     printf("Enter an integer: ");
     scanf("%14s", inputstring);
 
-
-
+    printf("The integer is %i\n", strtoint(inputstring));
 
 
 
