@@ -1,0 +1,9 @@
+/* README for converts2i
+*    Convert a string representing an integer to an actual integer.
+*
+*    Example program from, Kochan, Stephen, G., "Programming in C 3rd ed.,"
+*  Sams Publishing. page 229.
+*
+*    Programmer: Mark Crapser
+*
+*/
